@@ -9,7 +9,6 @@ const fetchPeople = async () => {
 
 const People = () => {
   const { data, status } = useQuery("people", fetchPeople);
-  console.log(data);
   return (
     <div>
       <h2>People</h2>
