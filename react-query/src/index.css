@@ -28,6 +28,10 @@ button:hover {
   color: #fff;
   border-color: #fff;
 }
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
 .content {
   text-align: left;
 }
