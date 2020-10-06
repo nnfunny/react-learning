@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar has-shadow is-white">
+      <!--Logo / Brand-->
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="assets/logo.png"
+            alt="Site Logo"
+            style="max-height: 70px"
+            class="py-2 px-2"
+          />
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+          <a class="navbar-item">My Account</a>
+          <a class="navbar-item">Shopping Cart (0)</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Breadcrumbs-->
+    <div class="section pt-4 pb-0">
+      <nav class="breadcrumb has-arrow-separator">
+        <ul class="container is-size-8">
+          <li><a class="has-text-grey">Coffee Ninja</a></li>
+          <li><a class="has-text-grey">Shop</a></li>
+          <li class="is-active"><a>Docker Dark Roast</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Product Info-->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-3-desktop is-6-tablet">
+            <h1 class="title is-size-1-desktop is-size-3-mobile">Docker</h1>
+            <h2 class="is-size-2-desktop is-size-3-mobile subtitle">
+              Dark Roast
+            </h2>
+            <p>
+              Sit consequuntur error quisquam eveniet consequatur nesciunt Sequi
+              molestias harum autem ratione distinctio esse? Nisi et.
+            </p>
+          </div>
+          <div class="column is-5-desktop is-6-tablet has-text-centered">
+            <img class="px-6" src="assets/product.png" alt="Coffee" />
+          </div>
+          <div class="column is-4-desktop is-12-tablet">
+            <div class="is-size-4 mb-4">$10.95</div>
+            <p class="mb-4">
+              Amet animi veniam voluptatem magnam numquam! Odit neque accusamus
+              dolorum?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-8 is-variable">
+          <div class="column is-7-tablet">
+            Dolor eligendi adipisicing numquam commodi recusandae, aliquid? Quas
+            dolore vero quaerat quibusdam.
+          </div>
+          <div class="column is-5-tablet">
+            Elit minus natus odit qui culpa, quos. Iste quisquam corrupti dolor
+            ducimus.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
