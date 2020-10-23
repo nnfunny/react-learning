@@ -11,3 +11,4 @@
 5. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
 6. [Sapper](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gdr4Qhx83gBBcID-KMe-PQ) (The Net Ninja)
 7. [Bulma CSS](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a) (The Net Ninja)
+8. [React Skeleton Screens](https://www.youtube.com/playlist?list=PL4cUxeGkcC9i6bZhMuAzQpC6YgLmB4k4-) (The Net Ninja)
