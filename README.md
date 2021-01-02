@@ -12,3 +12,4 @@
 6. [Sapper](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gdr4Qhx83gBBcID-KMe-PQ) (The Net Ninja)
 7. [Bulma CSS](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a) (The Net Ninja)
 8. [React Skeleton Screens](https://www.youtube.com/playlist?list=PL4cUxeGkcC9i6bZhMuAzQpC6YgLmB4k4-) (The Net Ninja)
+9. [Vue.js 3](https://youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1) (The Net Ninja)
