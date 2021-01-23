@@ -20,3 +20,6 @@
 
 ### HTML5 Game Development
 1. [HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro](https://youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) (Chris Courses)
+
+### Programming Language
+1. [A Tour of Go](https://tour.golang.org/welcome/1)
