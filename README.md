@@ -15,6 +15,7 @@
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
+2. [Spring Boot with Kotlin & JUnit 5 Tutorials](https://youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr) (Peter Sommerhoff)
 
 ### Web App
 1. [Github Jobs App](https://www.youtube.com/watch?v=fxY1q4SCB64) (Web Dev Simplified)
