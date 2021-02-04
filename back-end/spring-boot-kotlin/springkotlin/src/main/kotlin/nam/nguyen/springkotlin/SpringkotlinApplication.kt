@@ -9,3 +9,4 @@ class SpringkotlinApplication
 fun main(args: Array<String>) {
 	runApplication<SpringkotlinApplication>(*args)
 }
+
