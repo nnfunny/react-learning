@@ -34,4 +34,12 @@ class MockBankDataSource: BankDataSource {
 
         return bank
     }
+
+    override fun deleteBank(accountNumber: String) {
+        val currentBank = banks.firstOrNull() { it.accountNumber == accountNumber }
+            ?: throw NoSuchElementException("Could not find a bank with account number $accountNumber")
+
+        banks.remove(currentBank)
+    }
+
 }
