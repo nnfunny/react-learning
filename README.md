@@ -13,6 +13,7 @@
 7. [Vue.js 3](https://youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1) (The Net Ninja)
 8. [Next.js Tutorial for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) (The Net Ninja)
 8. [Vue 3 Animation & Transitions](https://youtube.com/playlist?list=PL4cUxeGkcC9ghm7-iTfS9n468Kp7l9Ipu) (The Net Ninja)
+9. [Data Visualization with D3, JavaScript, React - Full Course [2021]](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
