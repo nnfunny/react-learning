@@ -10,7 +10,8 @@ const URL =
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const margin = { top: 20, right: 20, bottom: 20, left: 200 };
+const margin = { top: 100, right: 60, bottom: 100, left: 230 };
+const xAxisLabelOffset = 50;
 
 function App() {
   const data = useData(URL);
@@ -21,13 +22,18 @@ function App() {
 
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.right - margin.left;
+
   const yValue = (d) => d.Country;
   const xValue = (d) => d.Population;
 
+  const siFormat = d3.format(".2s")
+  const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace("G", "B");
+  
   const yScale = d3
     .scaleBand()
     .domain(data.map(yValue))
-    .range([0, innerHeight]);
+    .range([0, innerHeight])
+    .paddingInner(0.15);
 
   const xScale = d3
     .scaleLinear()
@@ -37,9 +43,28 @@ function App() {
   return (
     <svg width={window.innerWidth} height={window.innerHeight}>
       <g transform={`translate(${margin.left}, ${margin.top})`}>
-        <AxisBottom xScale={xScale} innerHeight={innerHeight} />
+        <AxisBottom
+          xScale={xScale}
+          innerHeight={innerHeight}
+          tickFormat={xAxisTickFormat}
+        />
         <AxisLeft yScale={yScale} />
-        <Marks data={data} xScale={xScale} yScale={yScale} xValue={xValue} yValue={yValue}/>
+        <text
+          className="axis-label"
+          x={innerWidth / 2}
+          y={innerHeight + xAxisLabelOffset}
+          textAnchor="middle"
+        >
+          Population
+        </text>
+        <Marks
+          data={data}
+          xScale={xScale}
+          yScale={yScale}
+          xValue={xValue}
+          yValue={yValue}
+          toolTipFormat={xAxisTickFormat}
+        />
       </g>
     </svg>
   );
