@@ -1,7 +1,9 @@
 import * as d3 from "d3";
+import { useState } from "react";
 import "./App.css";
 import AxisBottom from "./components/AxisBottom";
 import AxisLeft from "./components/AxisLeft";
+import { Dropdown } from "./components/Dropdown";
 import Marks from "./components/Marks";
 import useData from "./hooks/useData";
 
@@ -12,26 +14,41 @@ const width = window.innerWidth;
 const height = window.innerHeight;
 const margin = { top: 20, right: 30, bottom: 65, left: 90 };
 const circleRadius = 10;
+const attributes = [
+  { value: "sepal_length", label: "Sepal Length" },
+  { value: "sepal_width", label: "Sepal Width" },
+  { value: "petal_length", label: "Petal Length" },
+  { value: "petal_width", label: "Petal Width" },
+  { value: "species", label: "Species" },
+];
+const getLabel = (attributeValue) => {
+  return (attributes.filter(attribute => attribute.value === attributeValue))[0].label;
+}
 
 function App() {
   const data = useData(URL);
 
-  if (!data) {
-    return <pre>Loadding...</pre>;
-  }
-
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.right - margin.left;
 
-  const xValue = (d) => d.petal_length;
-  const xAxisLable = "Petal Length";
+  const initialXAttribute = "petal_length";
+  const [xAttribute, setXAttribute] = useState(initialXAttribute);
+  const xValue = (d) => d[xAttribute];
+  const xAxisLable = getLabel(xAttribute);
   const xAxisLableOffset = 55;
-  const yValue = (d) => d.sepal_width;
-  const yAxisLable = "Sepal Width";
+
+  const initialYAttribute = "sepal_width";
+  const [yAttribute, setYAttribute] = useState(initialYAttribute);
+  const yValue = (d) => d[yAttribute];
+  const yAxisLable = getLabel(yAttribute);
   const yAxisLableOffset = 50;
 
   const siFormat = d3.format(".2s");
   const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace("G", "B");
+
+  if (!data) {
+    return <pre>Loadding...</pre>;
+  }
 
   const xScale = d3
     .scaleLinear()
@@ -46,43 +63,59 @@ function App() {
     .nice();
 
   return (
-    <svg width={window.innerWidth} height={window.innerHeight}>
-      <g transform={`translate(${margin.left}, ${margin.top})`}>
-        <AxisBottom
-          xScale={xScale}
-          innerHeight={innerHeight}
-          tickFormat={xAxisTickFormat}
-          tickOffset={15}
-        />
-        <text
-          className="axis-label"
-          x={innerWidth / 2}
-          y={innerHeight + xAxisLableOffset}
-          textAnchor="middle"
-        >
-          {xAxisLable}
-        </text>
-        <AxisLeft yScale={yScale} innerWidth={innerWidth} tickOffset={12} />
-        <text
-          className="axis-label"
-          textAnchor="middle"
-          transform={`translate(${-yAxisLableOffset},${
-            innerHeight / 2
-          }) rotate(-90)`}
-        >
-          {yAxisLable}
-        </text>
-        <Marks
-          data={data}
-          xScale={xScale}
-          yScale={yScale}
-          xValue={xValue}
-          yValue={yValue}
-          toolTipFormat={xAxisTickFormat}
-          circleRadius={circleRadius}
-        />
-      </g>
-    </svg>
+    <>
+      <label for="x-select">X:</label>
+      <Dropdown
+        options={attributes}
+        id="x-select"
+        selectedValue={xAttribute}
+        onSelectedValueChange={setXAttribute}
+      />
+      <label for="y-select">Y:</label>
+      <Dropdown
+        options={attributes}
+        id="y-select"
+        selectedValue={yAttribute}
+        onSelectedValueChange={setYAttribute}
+      />
+      <svg width={window.innerWidth} height={window.innerHeight}>
+        <g transform={`translate(${margin.left}, ${margin.top})`}>
+          <AxisBottom
+            xScale={xScale}
+            innerHeight={innerHeight}
+            tickFormat={xAxisTickFormat}
+            tickOffset={15}
+          />
+          <text
+            className="axis-label"
+            x={innerWidth / 2}
+            y={innerHeight + xAxisLableOffset}
+            textAnchor="middle"
+          >
+            {xAxisLable}
+          </text>
+          <AxisLeft yScale={yScale} innerWidth={innerWidth} tickOffset={12} />
+          <text
+            className="axis-label"
+            textAnchor="middle"
+            transform={`translate(${-yAxisLableOffset},${
+              innerHeight / 2
+            }) rotate(-90)`}
+          >
+            {yAxisLable}
+          </text>
+          <Marks
+            data={data}
+            xScale={xScale}
+            yScale={yScale}
+            xValue={xValue}
+            yValue={yValue}
+            toolTipFormat={xAxisTickFormat}
+            circleRadius={circleRadius}
+          />
+        </g>
+      </svg>
+    </>
   );
 }
 
