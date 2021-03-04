@@ -3,9 +3,11 @@ import { useState } from "react";
 import "./App.css";
 import AxisBottom from "./components/AxisBottom";
 import AxisLeft from "./components/AxisLeft";
-import { Dropdown } from "./components/Dropdown";
+// import { Dropdown } from "./components/Dropdown";
 import Marks from "./components/Marks";
 import useData from "./hooks/useData";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 const URL =
   "https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv";
@@ -22,8 +24,9 @@ const attributes = [
   { value: "species", label: "Species" },
 ];
 const getLabel = (attributeValue) => {
-  return (attributes.filter(attribute => attribute.value === attributeValue))[0].label;
-}
+  return attributes.filter((attribute) => attribute.value === attributeValue)[0]
+    .label;
+};
 
 function App() {
   const data = useData(URL);
@@ -42,6 +45,8 @@ function App() {
   const yValue = (d) => d[yAttribute];
   const yAxisLable = getLabel(yAttribute);
   const yAxisLableOffset = 50;
+
+  const colorValue = (d) => d.species;
 
   const siFormat = d3.format(".2s");
   const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace("G", "B");
@@ -62,21 +67,26 @@ function App() {
     .range([0, innerHeight])
     .nice();
 
+  const colorScale = d3
+    .scaleOrdinal()
+    .domain(data.map(colorValue))
+    .range(["#E6842A", "#137B80", "#8E6C8A"]);
+
   return (
     <>
       <label for="x-select">X:</label>
       <Dropdown
         options={attributes}
         id="x-select"
-        selectedValue={xAttribute}
-        onSelectedValueChange={setXAttribute}
+        value={xAttribute}
+        onChange={(option) => setXAttribute(option.value)}
       />
       <label for="y-select">Y:</label>
       <Dropdown
         options={attributes}
         id="y-select"
-        selectedValue={yAttribute}
-        onSelectedValueChange={setYAttribute}
+        value={yAttribute}
+        onChange={(option) => setYAttribute(option.value)}
       />
       <svg width={window.innerWidth} height={window.innerHeight}>
         <g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -108,6 +118,8 @@ function App() {
             data={data}
             xScale={xScale}
             yScale={yScale}
+            colorScale={colorScale}
+            colorValue={colorValue}
             xValue={xValue}
             yValue={yValue}
             toolTipFormat={xAxisTickFormat}

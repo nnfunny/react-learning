@@ -1,4 +1,14 @@
-const Marks = ({ data, yScale, xScale, xValue, yValue, toolTipFormat, circleRadius }) => {
+const Marks = ({
+  data,
+  yScale,
+  xScale,
+  colorScale,
+  xValue,
+  yValue,
+  colorValue,
+  toolTipFormat,
+  circleRadius,
+}) => {
   return (
     <>
       {data.map((d, index) => (
@@ -7,6 +17,7 @@ const Marks = ({ data, yScale, xScale, xValue, yValue, toolTipFormat, circleRadi
           key={index}
           cx={xScale(xValue(d))}
           cy={yScale(yValue(d))}
+          fill={colorScale(colorValue(d))}
           r={circleRadius}
         >
           <title>{toolTipFormat(xValue(d))}</title>

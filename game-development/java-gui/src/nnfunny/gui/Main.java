@@ -7,8 +7,7 @@ import java.awt.*;
 public class Main {
   //  final string ROOT_PATH
   public static void main(String[] args) {
-    final String RESOURCES_PATH = "src/resources/";
-    ImageIcon image = new ImageIcon(RESOURCES_PATH + "icon.png");
+    ImageIcon image = new ImageIcon("resources/images/icon.png");
     Border border = BorderFactory.createLineBorder(Color.GREEN, 3);
     JLabel label = new JLabel();
     label.setText("Bro, Hi");

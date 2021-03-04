@@ -4,9 +4,9 @@
 .tick text {
   fill: #635f5d;
 }
-.mark {
+/* .mark {
   fill: #137b80;
-}
+} */
 .axis-label {
   font-size: 2em;
   fill: #635f5d;
