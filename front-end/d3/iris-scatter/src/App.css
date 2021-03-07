@@ -3,6 +3,10 @@
 }
 .tick text {
   fill: #635f5d;
+  cursor: pointer;
+}
+.tick circle {
+  cursor: pointer;
 }
 /* .mark {
   fill: #137b80;

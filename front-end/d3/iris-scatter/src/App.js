@@ -8,14 +8,16 @@ import Marks from "./components/Marks";
 import useData from "./hooks/useData";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import ColorLegend from "./components/ColorLegend";
 
 const URL =
   "https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv";
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const margin = { top: 20, right: 30, bottom: 65, left: 90 };
+const margin = { top: 20, right: 200, bottom: 65, left: 90 };
 const circleRadius = 10;
+const fadeOpacity = 0.2
 const attributes = [
   { value: "sepal_length", label: "Sepal Length" },
   { value: "sepal_width", label: "Sepal Width" },
@@ -30,6 +32,7 @@ const getLabel = (attributeValue) => {
 
 function App() {
   const data = useData(URL);
+  const [hoveredValue, setHoveredValue] = useState(null);
 
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.right - margin.left;
@@ -47,6 +50,7 @@ function App() {
   const yAxisLableOffset = 50;
 
   const colorValue = (d) => d.species;
+  const colorLegenLabel = "Species";
 
   const siFormat = d3.format(".2s");
   const xAxisTickFormat = (tickValue) => siFormat(tickValue).replace("G", "B");
@@ -54,6 +58,8 @@ function App() {
   if (!data) {
     return <pre>Loadding...</pre>;
   }
+
+  const filteredData = data.filter((d) => hoveredValue === colorValue(d));
 
   const xScale = d3
     .scaleLinear()
@@ -74,14 +80,14 @@ function App() {
 
   return (
     <>
-      <label for="x-select">X:</label>
+      <label forhtml="x-select">X:</label>
       <Dropdown
         options={attributes}
         id="x-select"
         value={xAttribute}
         onChange={(option) => setXAttribute(option.value)}
       />
-      <label for="y-select">Y:</label>
+      <label forhtml="y-select">Y:</label>
       <Dropdown
         options={attributes}
         id="y-select"
@@ -114,8 +120,35 @@ function App() {
           >
             {yAxisLable}
           </text>
+          <g transform={`translate(${innerWidth + 60}, 60)`}>
+            <text className="axis-label" x={40} y={-25} textAnchor="middle">
+              {colorLegenLabel}
+            </text>
+            <ColorLegend
+              colorScale={colorScale}
+              tickTextOffset={20}
+              tickSpacing={25}
+              tickSize={circleRadius}
+              onHover={setHoveredValue}
+              hoveredValue={hoveredValue}
+              fadeOpacity={fadeOpacity}
+            />
+          </g>
+          <g opacity={hoveredValue ? fadeOpacity : 1}>
+            <Marks
+              data={data}
+              xScale={xScale}
+              yScale={yScale}
+              colorScale={colorScale}
+              colorValue={colorValue}
+              xValue={xValue}
+              yValue={yValue}
+              toolTipFormat={xAxisTickFormat}
+              circleRadius={circleRadius}
+            />
+          </g>
           <Marks
-            data={data}
+            data={filteredData}
             xScale={xScale}
             yScale={yScale}
             colorScale={colorScale}
