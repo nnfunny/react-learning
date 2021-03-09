@@ -1,33 +1,31 @@
 package nnfunny.gui;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MyFrame extends JFrame {
-  final JButton button;
-  final JLabel label;
+public class MyFrame extends JFrame implements ActionListener {
+  JButton button = new JButton("Submit");
+  JTextField textField = new JTextField();
 
   MyFrame() {
-    ImageIcon icon = new ImageIcon("resources/images/icon.png");
-    label = new JLabel();
-    label.setIcon(icon);
-    label.setBounds(150, 250, 250, 250);
-    label.setVisible(false);
-
-    button = new JButton();
-    button.setBounds(200, 100, 200, 100);
-    button.setText("I'm a button");
-    button.addActionListener(e -> {
-      System.out.println("Hello");
-      label.setVisible(true);
-    });
-    button.setFocusable(false);
-
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.add(button);
-    this.add(label);
-    this.setLayout(null);
+    this.setLayout(new FlowLayout());
+
+    JCheckBox checkBox = new JCheckBox();
+    checkBox.setText("Liked");
+    checkBox.setFocusable(false);
+    checkBox.setFont(new Font("Consolas", Font.PLAIN, 25));
+
+    this.add(checkBox);
     this.setTitle("GUI JAVA");
-    this.setSize(750, 750);
+    this.pack();
     this.setVisible(true);
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+
   }
 }
