@@ -18,6 +18,7 @@
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
 2. [Spring Boot with Kotlin & JUnit 5 Tutorials](https://youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr) (Peter Sommerhoff)
+3. [Ruby On Rails Crash Course 2020](https://youtu.be/B3Fbujmgo60) (Web-Crunch)
 
 ### Web App
 1. [Github Jobs App](https://www.youtube.com/watch?v=fxY1q4SCB64) (Web Dev Simplified)
@@ -28,3 +29,4 @@
 
 ### Programming Language
 1. [A Tour of Go](https://tour.golang.org/welcome/1)
+2. [Ruby Programming | In One Video](https://youtu.be/8wZ2ZD--VTk) (Mike Dane)
