@@ -19,6 +19,7 @@
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
 2. [Spring Boot with Kotlin & JUnit 5 Tutorials](https://youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr) (Peter Sommerhoff)
 3. [Ruby On Rails Crash Course 2020](https://youtu.be/B3Fbujmgo60) (Web-Crunch)
+4. [AWS Basics for Beginners - Full Course](https://youtu.be/ulprqHHWlng) (Digital Cloud Training)
 
 ### Web App
 1. [Github Jobs App](https://www.youtube.com/watch?v=fxY1q4SCB64) (Web Dev Simplified)
@@ -26,6 +27,7 @@
 ### Game Development
 1. [HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro](https://youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) (Chris Courses)
 2. [Java GUI ☕ (NEW)](https://youtu.be/Kmgo00avvEw) (Bro Code)
+3. [Godot 3 Tutorial Series](https://youtube.com/playlist?list=PLS9MbmO_ssyDk79j9ewONxV88fD5e_o5d) (Gamefromscratch)
 
 ### Programming Language
 1. [A Tour of Go](https://tour.golang.org/welcome/1)
