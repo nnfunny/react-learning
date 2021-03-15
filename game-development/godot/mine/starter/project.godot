@@ -25,7 +25,7 @@ EffekseerSystem="*res://addons/effekseer/src/EffekseerSystem.gdns"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "effekseer" )
+enabled=PoolStringArray(  )
 
 [rendering]
 
