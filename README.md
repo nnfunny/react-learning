@@ -14,6 +14,7 @@
 8. [Next.js Tutorial for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) (The Net Ninja)
 8. [Vue 3 Animation & Transitions](https://youtube.com/playlist?list=PL4cUxeGkcC9ghm7-iTfS9n468Kp7l9Ipu) (The Net Ninja)
 9. [Data Visualization with D3, JavaScript, React - Full Course [2021]](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
+10. [Material UI Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) (The Net Ninja)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
@@ -34,4 +35,4 @@
 2. [Ruby Programming | In One Video](https://youtu.be/8wZ2ZD--VTk) (Mike Dane)
 
 ### Machine Learning 
-1. [Neural Networks from Scratch ](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) (sentdex)
+1. [Neural Networks from Scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) (sentdex)
