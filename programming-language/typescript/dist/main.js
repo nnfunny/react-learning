@@ -1,9 +1,5 @@
-define(["require", "exports"], function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    console.log("Hello");
-    var nam = function () {
-        console.log("H");
-    };
-    exports.default = nam;
-});
+"use strict";
+function greeting(name) {
+    return "Hello, " + name;
+}
+console.log(greeting("Nam"));

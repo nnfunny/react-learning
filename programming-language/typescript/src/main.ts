@@ -1,6 +1,4 @@
-console.log("Hello");
-const nam = () => {
-  console.log("H")
+function greeting(name: string) {
+  return `Hello, ${name}`;
 }
-export default nam;
-
+console.log(greeting("Nam"))
