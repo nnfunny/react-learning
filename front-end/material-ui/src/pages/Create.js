@@ -4,7 +4,13 @@ import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import TextField from "@material-ui/core/TextField";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
 import { makeStyles } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   field: { marginTop: 20, marginBottom: 20, display: "block" },
@@ -12,10 +18,12 @@ const useStyles = makeStyles({
 
 export default function Create() {
   const classes = useStyles();
+  const history = useHistory();
   const [title, setTitle] = useState("");
-  const [detail, setDetail] = useState("");
+  const [details, setDetail] = useState("");
   const [titleError, setTitleError] = useState(false);
   const [detailError, setDetailError] = useState(false);
+  const [category, setCategory] = useState("todos");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,8 +33,15 @@ export default function Create() {
     if (title.trim() === "") {
       setTitleError(true);
     }
-    if (detail.trim() === "") {
+    if (details.trim() === "") {
       setDetailError(true);
+    }
+    if (details && title) {
+      fetch("http://localhost:8000/notes", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ title, details, category }),
+      }).then(() => history.push("/"));
     }
   };
 
@@ -63,6 +78,22 @@ export default function Create() {
           required
           error={detailError}
         />
+        <FormControl className={classes.field}>
+          <FormLabel>Not Category</FormLabel>
+          <RadioGroup
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <FormControlLabel control={<Radio />} label="Todos" value="todos" />
+            <FormControlLabel control={<Radio />} label="Money" value="money" />
+            <FormControlLabel
+              control={<Radio />}
+              label="Reminder"
+              value="reminder"
+            />
+            <FormControlLabel control={<Radio />} label="Work" value="work" />
+          </RadioGroup>
+        </FormControl>
         <Button
           type="submit"
           color="secondary"
