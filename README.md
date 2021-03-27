@@ -3,7 +3,6 @@
 </p>
 
 ### Front-end
-
 1. [React Query](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jpi7Ptjl5b50p9gLjOFani) (The Net Ninja)
 2. [Photo Gallery](https://www.youtube.com/watch?v=vUe91uOx7R0) (The Net Ninja)
 3. [Tailwind CSS](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw) (The Net Ninja)
