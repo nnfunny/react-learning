@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% block title %} List | Nam's Todo List {% endblock %}
+
+{% block content %}
+  <h1>{{item_list.name}}</h1>
+  <ul>
+    {% for item in item_list.item_set.all %}
+      {% if item.complete == False %}
+        <li>{{item.text}}</li>
+      {% else %}
+        <li><strike>{{item.text}}</strike></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -20,6 +20,7 @@
 2. [Spring Boot with Kotlin & JUnit 5 Tutorials](https://youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr) (Peter Sommerhoff)
 3. [Ruby On Rails Crash Course 2020](https://youtu.be/B3Fbujmgo60) (Web-Crunch)
 4. [AWS Basics for Beginners - Full Course](https://youtu.be/ulprqHHWlng) (Digital Cloud Training)
+5. [Django For Beginners - Full Tutorial](https://youtu.be/sm1mokevMWk) (Tech With Tim)
 
 ### Web App
 1. [Github Jobs App](https://www.youtube.com/watch?v=fxY1q4SCB64) (Web Dev Simplified)
