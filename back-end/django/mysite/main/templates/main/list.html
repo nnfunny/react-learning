@@ -3,13 +3,26 @@
 
 {% block content %}
   <h1>{{item_list.name}}</h1>
-  <ul>
+  <form method="POST" action="">
+    {% csrf_token %}
     {% for item in item_list.item_set.all %}
-      {% if item.complete == False %}
-        <li>{{item.text}}</li>
+    <div class="form-check mb-3 d-flex align-items-center">
+      {% if item.complete == True %}
+        <input class="form-check-input" type="checkbox" name="c{{item.id}}" id="" value="clicked" checked>
       {% else %}
-        <li><strike>{{item.text}}</strike></li>
+        <input class="form-check-input" type="checkbox" name="c{{item.id}}" id="" value="clicked">
       {% endif %}
+      <label class="form-check-label ms-3">
+        <input type="text" value={{item.text}} class="form-control">
+      </label>
+    </div>
     {% endfor %}
-  </ul>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type="submit" name="newItem" value="newItem" class="btn btn-success">Add Item</button>
+      </div>
+      <input type="text" name="new" id="new">
+    </div>
+    <button type="submit" name="save" value="save" class="btn-success">Save</button>
+  </form>
 {% endblock %}
