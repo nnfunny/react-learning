@@ -4,3 +4,4 @@ node_modules/
 **/**/bin/
 **/django/include/
 **/django/lib/**
+.vscode/
