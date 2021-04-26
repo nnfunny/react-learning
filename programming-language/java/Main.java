@@ -1,25 +1,24 @@
 public class Main {
   public static void main(String[] args) {
-    int beerNum = 99;
-    String word = "bottles";
+    Echo e1 = new Echo();
+    Echo e2 = new Echo();
+    int x = 0;
 
-    while (beerNum > 0) {
-      if (beerNum == 1) {
-        word = "bottle";
+    while (x < 4) {
+      e1.hello();
+      e1.count += 1;
+
+      if (x > 0) {
+        e2.count += 1;
       }
 
-      System.out.println(beerNum + " " + word + " of beer on the wall");
-      System.out.println(beerNum + " " + word + " of beer");
-      System.out.println("Take one down");
-      System.out.println("Pass it around.");
-      beerNum = beerNum - 1;
-
-      if (beerNum > 0) {
-        word = beerNum == 1 ? "bottle" : "bottles";
-        System.out.println(beerNum + " " + word + " of beer on the wall");
-      } else {
-        System.out.println("No more bottles of beer on the wall");
+      if (x > 1) {
+        e2.count += e1.count;
       }
+
+      x++;
     }
+
+    System.out.println(e2.count);
   }
 }
