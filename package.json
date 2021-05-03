@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "netlify-identity-widget": "^1.9.1"
+  }
+}

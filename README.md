@@ -15,6 +15,7 @@
 9. [Data Visualization with D3, JavaScript, React - Full Course [2021]](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
 10. [Material UI Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) (The Net Ninja)
 11. [Next.js & Contentful Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1) (The Net Ninja)
+12. [Next.js & Identity (auth) Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv) (The Net Ninja)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
