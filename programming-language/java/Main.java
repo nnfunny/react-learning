@@ -1,24 +1,27 @@
 public class Main {
   public static void main(String[] args) {
-    Echo e1 = new Echo();
-    Echo e2 = new Echo();
-    int x = 0;
+    int y = 0;
+    int[] index = new int[4];
+    String[] islands = new String[4];
 
-    while (x < 4) {
-      e1.hello();
-      e1.count += 1;
+    islands[0] = "Bermuda";
+    islands[1] = "Fiji";
+    islands[2] = "Azores";
+    islands[3] = "Cozumel";
 
-      if (x > 0) {
-        e2.count += 1;
-      }
+    index[0] = 1;
+    index[1] = 3;
+    index[2] = 0;
+    index[3] = 2;
 
-      if (x > 1) {
-        e2.count += e1.count;
-      }
+    int ref;
+    while (y < 4) {
+      ref = index[y];
 
-      x++;
+      System.out.print("island = ");
+      System.out.println(islands[ref]);
+
+      y++;
     }
-
-    System.out.println(e2.count);
   }
 }
