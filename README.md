@@ -31,6 +31,7 @@
 1. [HTML5 Canvas Tutorials for Beginners | Become a Canvas Pro](https://youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL) (Chris Courses)
 2. [Java GUI ☕ (NEW)](https://youtu.be/Kmgo00avvEw) (Bro Code)
 3. [Godot 3 Tutorial Series](https://youtube.com/playlist?list=PLS9MbmO_ssyDk79j9ewONxV88fD5e_o5d) (Gamefromscratch)
+4. [lwjglgamedev](https://ahbejarano.gitbook.io/lwjglgamedev/) (ahbejarano)
 
 ### Programming Language
 1. [A Tour of Go](https://tour.golang.org/welcome/1)
