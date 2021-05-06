@@ -1,43 +1,85 @@
 package engine;
 
 public class GameEngine implements Runnable {
+    public static final int TARGET_FPS = 75;
+    public static final int TARGET_UPS = 30;
+
+    private final Window window;
+    private final Timer timer;
+    private final IGameLogic gameLogic;
+
+    public GameEngine(String windowTitle,
+                      int width,
+                      int height,
+                      boolean vSync,
+                      IGameLogic gameLogic) throws Exception {
+        this.window = new Window(windowTitle, width, height, vSync);
+        this.gameLogic = gameLogic;
+        this.timer = new Timer();
+    }
 
     @Override
     public void run() {
+        try {
+            init();
+            gameLoop();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
 
+    protected void init() throws Exception {
+        window.init();
+        timer.init();
+        gameLogic.init();
     }
 
     protected void gameLoop() {
-        double secsPerFrame = 1.0d / 30.0d;
-        double previous = getTime();
-        double steps = 0.0;
+        float elapsedTime;
+        float accumulator = 0f;
+        float interval = 1f / TARGET_UPS;
 
-        while (true) {
-            double loopStarTime = getTime();
-            double elapsed = loopStarTime - previous;
-            previous = loopStarTime;
-            steps += elapsed;
+        while (!window.windowShouldClose()) {
+            elapsedTime = timer.getElaspsedTime();
+            accumulator += elapsedTime;
 
-            handleInput();
+            input();
 
-            while (steps >= secsPerFrame) {
-                updateGameState();
-                steps -= secsPerFrame;
+            while (accumulator >= interval) {
+                update(interval);
+                accumulator -= interval;
             }
 
             render();
-            sync(loopStarTime);
+
+            if (!window.isvSync()) {
+                sync();
+            }
         }
     }
 
-    private void sync(double loopStartTime) {
-        float loopSlot = 1f / 50;
-        double endTime = loopStartTime + loopSlot;
+    private void sync() {
+        float loopSlot = 1f / TARGET_FPS;
+        double endTime = timer.getLastLoopTime() + loopSlot;
 
-        while (getTime() < endTime) {
+        while (timer.getTime() < endTime) {
             try {
                 Thread.sleep(1);
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+            }
         }
+    }
+
+    protected void input() {
+        gameLogic.input(window);
+    }
+
+    protected void update(float interval) {
+        gameLogic.update(interval);
+    }
+
+    protected void render() {
+        gameLogic.render(window);
+        window.update();
     }
 }
