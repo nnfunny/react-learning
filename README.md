@@ -36,6 +36,7 @@
 ### Programming Language
 1. [A Tour of Go](https://tour.golang.org/welcome/1)
 2. [Ruby Programming | In One Video](https://youtu.be/8wZ2ZD--VTk) (Mike Dane)
+3. [Go Tutorial (Golang) for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9gC88BEo9czgyS72A3doDeM) (The Net Ninja)
 
 ### Machine Learning 
 1. [Neural Networks from Scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) (sentdex)
