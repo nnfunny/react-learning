@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import  (
+  "strings"
+  "fmt"
+)
 
 func main() {
-  names := [4]string{ "Nam", "Mario", "Peach", "Bower" }
+  greeting := "Hello there friends"
 
-  fmt.Println(names)
+  fmt.Println(strings.Contains(greeting, "hello"))
+  fmt.Println(strings.ReplaceAll(greeting, "Hello", "hi"))
+  fmt.Println(strings.Index(greeting, "th"))
 }
