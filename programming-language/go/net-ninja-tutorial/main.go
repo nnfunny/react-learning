@@ -1,29 +1,9 @@
 package main
 
-import  (
-  "strings"
-  "fmt"
-)
-
-func getInitials(n string) (string, string) {
-  s := strings.ToUpper(n)
-  name := strings.Split(s, " ")
-
-  var initials []string
-
-  for _, value := range name {
-    initials = append(initials, value[:1])
-  }
-
-  if (len(initials) > 1) {
-    return initials[0], initials[1]
-  }
-
-  return initials[0], "_"
-}
+import "fmt"
 
 func main() {
-  first, second := getInitials("nam nguyen")
+	mybill := newBill("Nam's bill")
 
-  fmt.Println(first, second)
+	fmt.Println(mybill)
 }
