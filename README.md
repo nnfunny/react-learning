@@ -16,6 +16,7 @@
 10. [Material UI Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) (The Net Ninja)
 11. [Next.js & Contentful Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1) (The Net Ninja)
 12. [Next.js & Identity (auth) Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv) (The Net Ninja)
+13. [Bootstrap 5 Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) (The Net Ninja)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
@@ -39,5 +40,5 @@
 3. [Go Tutorial (Golang) for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9gC88BEo9czgyS72A3doDeM) (The Net Ninja)
 4. [Javascript.Info](https://javascript.info/)
 
-### Machine Learning 
+### Machine Learning
 1. [Neural Networks from Scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) (sentdex)
