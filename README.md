@@ -12,17 +12,18 @@
 7. [Vue.js 3](https://youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1) (The Net Ninja)
 8. [Next.js Tutorial for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) (The Net Ninja)
 8. [Vue 3 Animation & Transitions](https://youtube.com/playlist?list=PL4cUxeGkcC9ghm7-iTfS9n468Kp7l9Ipu) (The Net Ninja)
-9. [Data Visualization with D3, JavaScript, React - Full Course [2021]](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
+9. [Data Visualization with D3, JavaScript, React - Full Course [2021](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
 10. [Material UI Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) (The Net Ninja)
 11. [Next.js & Contentful Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1) (The Net Ninja)
 12. [Next.js & Identity (auth) Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv) (The Net Ninja)
 13. [Bootstrap 5 Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) (The Net Ninja)
+14. [GraphQL Crash course | easy way](https://youtu.be/_Zss2Mbz4Bs) (Hitesh Choudharty)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
 2. [Spring Boot with Kotlin & JUnit 5 Tutorials](https://youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr) (Peter Sommerhoff)
 3. [Ruby On Rails Crash Course 2020](https://youtu.be/B3Fbujmgo60) (Web-Crunch)
-4. [AWS Basics for Beginners - Full Course](https://youtu.be/ulprqHHWlng) (Digital Cloud Training)
+4. [AWS Basics for Beginners - Full Course](https://youtu.be/ulprqHHWjng) (Digital Cloud Training)
 5. [Django For Beginners - Full Tutorial](https://youtu.be/sm1mokevMWk) (Tech With Tim)
 
 ### Web App
