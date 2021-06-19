@@ -12,7 +12,7 @@
 7. [Vue.js 3](https://youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1) (The Net Ninja)
 8. [Next.js Tutorial for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw) (The Net Ninja)
 8. [Vue 3 Animation & Transitions](https://youtube.com/playlist?list=PL4cUxeGkcC9ghm7-iTfS9n468Kp7l9Ipu) (The Net Ninja)
-9. [Data Visualization with D3, JavaScript, React - Full Course [2021](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
+9. [Data Visualization with D3, JavaScript, React - Full Course [2021]](https://youtu.be/2LhoCfjm8R4) (freeCodeCamp)
 10. [Material UI Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58) (The Net Ninja)
 11. [Next.js & Contentful Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1) (The Net Ninja)
 12. [Next.js & Identity (auth) Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv) (The Net Ninja)
