@@ -18,6 +18,7 @@
 12. [Next.js & Identity (auth) Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9ig-veuRaLI4QB0Ws8xMzjv) (The Net Ninja)
 13. [Bootstrap 5 Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) (The Net Ninja)
 14. [GraphQL Crash course | easy way](https://youtu.be/_Zss2Mbz4Bs) (Hitesh Choudharty)
+15. [React Testing Library Tutorial](https://youtube.com/playlist?list=PL4cUxeGkcC9gm4_-5UsNmLqMosM-dzuvQ) (The Net Ninja)
 
 ### Back-end
 1. [Node Auth JWT](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp) (The Net Ninja)
