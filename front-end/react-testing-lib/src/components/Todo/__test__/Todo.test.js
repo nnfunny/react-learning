@@ -45,7 +45,7 @@ describe('Todo', () => {
 
     const divElement = screen.getByText(/Go Grocery Shopping/i);
 
-    expect(divElement).not.toHaveClass("todo-item-active");
+    expect(divElement).not.toHaveClass('todo-item-active');
   });
 
   test('tasks should have completed class when clicked', () => {
@@ -53,8 +53,8 @@ describe('Todo', () => {
     addTasks(['Go Grocery Shopping', 'Pet my cat', 'Wash my hands']);
 
     const divElement = screen.getByText(/Go Grocery Shopping/i);
-    fireEvent.click(divElement)
+    fireEvent.click(divElement);
 
-    expect(divElement).toHaveClass("todo-item-active");
+    expect(divElement).toHaveClass('todo-item-active');
   });
 });
